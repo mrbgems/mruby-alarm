@@ -61,7 +61,7 @@ void mrb_mruby_alarm_gem_init(mrb_state *mrb)
     alarm = mrb_define_class(mrb, "Alarm", mrb->object_class);
     mrb_define_method(mrb, alarm, "initialize", mrb_alarm_init, MRB_ARGS_REQ(1));
     mrb_define_method(mrb, alarm, "hello", mrb_alarm_hello, MRB_ARGS_NONE());
-    mrb_define_class_method(mrb, alarm, "hi", mrb_alarm_hi, MRB_ARGS_NONE());
+    mrb_define_class_method(mrb, alarm, "foo", mrb_alarm_hi, MRB_ARGS_NONE());
     DONE;
 }
 
