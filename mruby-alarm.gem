@@ -1,0 +1,6 @@
+name: mruby-alarm
+description: Alarm class
+author: Kousuke Shimofuji
+website: https://github.com/k0u5uk3/mruby-alarm
+protocol: git
+repository: https://github.com/k0u5uk3/mruby-alarm.git
