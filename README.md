@@ -12,14 +12,29 @@ MRuby::Build.new do |conf|
 end
 ```
 ## example
-```ruby
-p Alarm.hi
-#=> "hi!!"
-t = Alarm.new "hello"
-p t.hello
-#=> "hello"
-p t.bye
-#=> "hello bye"
+
+ * use class method
+
+```
+$ ./bin/mirb
+mirb - Embeddable Interactive Ruby Shell
+
+> Alarm.alarm(5)
+ => nil
+> Alarm clock: 14
+```
+
+ * use instance method
+
+```
+$ ./bin/mirb
+mirb - Embeddable Interactive Ruby Shell
+
+> arm = Alarm.new
+ => #<Alarm:0x7f8e5882fff0>
+> arm.alarm(5)
+ => nil
+> Alarm clock: 14
 ```
 
 ## License
