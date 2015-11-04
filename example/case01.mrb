@@ -1,0 +1,9 @@
+Signal.trap(:ALRM){ |signo|
+   puts "TRAP ALRM SIGNAL!"
+}
+
+Alarm.alarm(3)
+
+loop do
+   sleep(5)
+end
