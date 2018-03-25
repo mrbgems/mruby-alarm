@@ -2,16 +2,15 @@
 ## Alarm Test
 ##
 
-assert("Alarm#hello") do
-  t = Alarm.new "hello"
-  assert_equal("hello", t.hello)
-end
+assert 'Alarm.alarm' do
+  alarmed = false
 
-assert("Alarm#bye") do
-  t = Alarm.new "hello"
-  assert_equal("hello bye", t.bye)
-end
+  Signal.trap(:ALRM) do |signo|
+    alarmed = true
+  end
 
-assert("Alarm.hi") do
-  assert_equal("hi!!", Alarm.hi)
+  Alarm.alarm(1)
+  sleep(2)
+
+  assert_true alarmed
 end
